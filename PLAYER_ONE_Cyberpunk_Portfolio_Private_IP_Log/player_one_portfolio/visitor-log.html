@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>PLAYER.ONE // Private Visitor Log</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080b12;--panel:#101724;--line:#26394b;--cyan:#64f6e8;--pink:#ff4f9a;--muted:#9eafc2}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#122032 0%,var(--bg) 60%);color:#e8f3ff;font:15px/1.5 system-ui,sans-serif;min-height:100vh;padding:28px}
+    main{max-width:1050px;margin:5vh auto;background:#0b111bd9;border:1px solid var(--line);padding:clamp(20px,4vw,38px);box-shadow:0 0 40px #00f0ff0b}
+    .eyebrow{color:var(--cyan);font:12px monospace;letter-spacing:.18em}h1{font-size:clamp(25px,4vw,40px);margin:.4em 0}p{color:var(--muted)}label{display:block;margin:20px 0 7px}input{width:100%;max-width:540px;background:#050911;color:#fff;border:1px solid #355269;padding:13px;font:inherit}button{cursor:pointer;background:var(--cyan);color:#061015;border:0;padding:13px 18px;font-weight:800;margin:12px 8px 12px 0}button.secondary{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}#status{min-height:24px;color:var(--pink)}.table-wrap{overflow:auto;margin-top:22px}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--cyan);font:12px monospace;letter-spacing:.08em}td.ip{font-family:ui-monospace,monospace;color:#fff} .hidden{display:none}.notice{border-left:2px solid var(--pink);padding:10px 14px;background:#ff4f9a0b;font-size:13px}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">PLAYER.ONE // RESTRICTED CONSOLE</div>
+  <h1>Private visitor log</h1>
+  <p>Owner-only view of recent visitor sessions recorded by the portfolio API.</p>
+  <p class="notice">Keep this page and your access secret private. Visitor IP addresses can be personal data. Use the log responsibly, disclose collection in your privacy notice, and remove records when no longer needed.</p>
+  <section id="login">
+    <label for="secret">Owner access secret</label>
+    <input id="secret" type="password" autocomplete="current-password" placeholder="Enter VISITOR_LOG_SECRET">
+    <div><button id="load" type="button">AUTHENTICATE & LOAD LOG</button></div>
+  </section>
+  <section id="results" class="hidden">
+    <p id="summary"></p><button id="refresh" type="button">REFRESH</button><button id="logout" class="secondary" type="button">LOCK CONSOLE</button>
+    <div class="table-wrap"><table><thead><tr><th>TIME (UTC)</th><th>IP ADDRESS</th><th>COUNTRY</th><th>REGION</th><th>CITY</th></tr></thead><tbody id="entries"></tbody></table></div>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+<script>
+(() => {
+  const secretInput = document.getElementById('secret');
+  const status = document.getElementById('status');
+  const results = document.getElementById('results');
+  const login = document.getElementById('login');
+  let secret = '';
+  async function loadLog() {
+    status.textContent = 'Contacting private endpoint…';
+    try {
+      const response = await fetch('/api/visitor-log', {method:'POST', headers:{'Authorization':'Bearer '+secret, 'Content-Type':'application/json'}, body:'{}', cache:'no-store'});
+      const data = await response.json();
+      if (!response.ok) throw new Error(response.status === 401 ? 'Access denied. Check VISITOR_LOG_SECRET.' : (data.error || 'Could not load log.'));
+      const body = document.getElementById('entries'); body.replaceChildren();
+      for (const item of data.entries) {
+        const tr = document.createElement('tr');
+        for (const value of [item.timestamp || '', item.ip || 'unknown', item.country || 'unknown', item.region || 'unknown', item.city || 'unknown']) {
+          const td = document.createElement('td'); td.textContent = value; if (value === item.ip) td.className = 'ip'; tr.appendChild(td);
+        }
+        body.appendChild(tr);
+      }
+      document.getElementById('summary').textContent = `${data.entries.length} recent session record(s). Up to 200 most recent entries are shown.`;
+      login.classList.add('hidden'); results.classList.remove('hidden'); status.textContent = '';
+    } catch (error) { status.textContent = error.message || 'Unable to load visitor log.'; }
+  }
+  document.getElementById('load').addEventListener('click', () => { secret = secretInput.value; if (!secret) {status.textContent='Enter the owner secret first.'; return;} loadLog(); });
+  document.getElementById('refresh').addEventListener('click', loadLog);
+  document.getElementById('logout').addEventListener('click', () => { secret = ''; secretInput.value = ''; results.classList.add('hidden'); login.classList.remove('hidden'); status.textContent='Console locked.'; });
+})();
+</script></body></html>
