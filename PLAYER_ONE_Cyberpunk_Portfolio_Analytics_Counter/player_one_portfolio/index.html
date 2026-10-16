@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Anushka Patil — B.Tech Computer Science student, developer, and builder of AI, systems, and web projects.">
+  <title>Anushka Patil — Cyberpunk Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Vercel Web Analytics: enable Web Analytics in the Vercel project dashboard after importing. -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Skippable boot sequence -->
+  <section id="boot-screen" class="boot-screen" aria-label="System startup">
+    <div class="boot-stars" aria-hidden="true"></div>
+    <div class="boot-top mono"><span>ANUSHKA.EXE / PORTFOLIO OS</span><span>BUILD 01.026</span></div>
+    <div class="boot-content">
+      <div class="boot-orbit"><span class="orbit-core">P<span>.</span>1</span><i></i><b></b></div>
+      <p class="eyebrow">INITIALIZING PERSONAL SYSTEM</p>
+      <h1>ANUSHKA<span>.</span>EXE</h1>
+      <p class="boot-subtitle">ANUSHKA PATIL // PLAYER PROFILE</p>
+      <div class="boot-log mono" id="boot-log" aria-live="polite">
+        <p>&gt; loading portfolio modules...</p>
+        <p>&gt; establishing secure connection...</p>
+        <p>&gt; preparing user interface...</p>
+      </div>
+      <div class="boot-progress"><span id="boot-progress-fill"></span></div>
+      <p class="boot-status mono" id="boot-status">SYSTEM BOOT: 00%</p>
+    </div>
+    <button class="skip-boot" id="skip-boot" type="button">SKIP INTRO <span>↗</span></button>
+  </section>
+
+  <div id="app" class="app-shell is-hidden">
+    <header class="topbar">
+      <a class="brand" href="#home" data-nav="home" aria-label="PLAYER.ONE home">
+        <span class="brand-mark">P<span>1</span></span>
+        <span class="brand-name">ANUSHKA<span>.</span>EXE<small>DEVELOPER PORTFOLIO</small></span>
+      </a>
+      <div class="topbar-right">
+        <span class="system-state"><i></i> SYSTEM ONLINE</span>
+        <button class="icon-button sound-toggle" id="sound-toggle" type="button" aria-pressed="false" title="Toggle interface sounds">♫<span class="sr-only">Toggle interface sounds</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="Portfolio navigation">
+      <div class="side-label mono">NAVIGATION MODULE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-nav="home"><span class="nav-icon">⌂</span><span>Home</span><kbd>01</kbd></button>
+        <button class="nav-item" data-nav="profile"><span class="nav-icon">◉</span><span>Profile</span><kbd>02</kbd></button>
+        <button class="nav-item" data-nav="skills"><span class="nav-icon">⌘</span><span>Skill tree</span><kbd>03</kbd></button>
+        <button class="nav-item" data-nav="projects"><span class="nav-icon">▣</span><span>Missions</span><kbd>04</kbd></button>
+        <button class="nav-item" data-nav="achievements"><span class="nav-icon">✧</span><span>Achievements</span><kbd>05</kbd></button>
+        <button class="nav-item" data-nav="gallery"><span class="nav-icon">▧</span><span>Gallery</span><kbd>06</kbd></button>
+        <button class="nav-item" data-nav="contact"><span class="nav-icon">↗</span><span>Contact</span><kbd>07</kbd></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-status"><span class="status-pulse"></span><div><small>SYSTEM STATUS</small><strong>ALL SYSTEMS NOMINAL</strong></div></div>
+        <button class="terminal-launch" id="terminal-launch" type="button"><span>$_</span> OPEN TERMINAL <kbd> T </kbd></button>
+        <div class="side-footer mono">PORTFOLIO OS <span>v1.0.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-stage">
+      <div class="stage-topline mono"><span id="section-index">SECTOR 01 / OVERVIEW</span><span><i class="tiny-dot"></i> CONNECTION STABLE</span></div>
+
+      <!-- HOME -->
+      <section class="screen active" id="home" data-title="SECTOR 01 / OVERVIEW" aria-labelledby="home-title">
+        <div class="home-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> WELCOME, PLAYER <span class="blink">_</span></p>
+            <h1 id="home-title">LEVEL UP<br>YOUR <span>FUTURE.</span></h1>
+            <p class="hero-role">B.TECH COMPUTER SCIENCE <b>//</b> DEVELOPER & PROBLEM SOLVER</p>
+            <p class="hero-description">A third-year Computer Science student at Symbiosis Institute of Technology, Nagpur. I build things from low-level C programs to AI-powered chatbots, driven by curiosity and a love for problem-solving.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-nav="profile" type="button">EXPLORE MY WORLD <span>↗</span></button>
+              <button class="button button-ghost" data-nav="projects" type="button">VIEW MISSIONS <span>⌁</span></button>
+            </div>
+            <div class="hero-stats">
+              <div><strong>07</strong><span>PORTFOLIO SECTORS</span></div>
+              <div><strong>∞</strong><span>ROOM TO GROW</span></div>
+              <div><strong class="online-text">ONLINE</strong><span>PLAYER STATUS</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-corner corner-tl"></div><div class="visual-corner corner-br"></div>
+            <div class="visual-label mono"><span>FIG. 001</span><span>AVATAR PROJECTION</span></div>
+            <div class="avatar-halo"></div>
+            <div class="avatar-ring ring-one"></div><div class="avatar-ring ring-two"></div>
+            <div class="avatar-art" role="img" aria-label="Stylized futuristic cyberpunk character illustration">
+              <svg viewBox="0 0 420 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#182f50"/><stop offset=".5" stop-color="#101624"/><stop offset="1" stop-color="#351548"/></linearGradient>
+                  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd7c4"/><stop offset="1" stop-color="#b77e9b"/></linearGradient>
+                  <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1c3556"/><stop offset=".55" stop-color="#090d18"/><stop offset="1" stop-color="#a82d9d"/></linearGradient>
+                  <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00f5ff"/><stop offset="1" stop-color="#b026ff"/></linearGradient>
+                  <filter id="softglow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <path d="M54 540 Q68 423 139 377 L178 354 267 355 317 391 Q369 434 384 540Z" fill="url(#coat)" stroke="#00dff5" stroke-opacity=".7" stroke-width="2"/>
+                <path d="M140 380 L177 354 217 415 172 467 120 405Z" fill="#16243a" stroke="#a026cf" stroke-width="2"/>
+                <path d="M267 357 L314 389 279 471 224 415Z" fill="#0c1321" stroke="#00e5ff" stroke-width="2"/>
+                <path d="M180 322 L177 373 214 410 253 370 249 314Z" fill="url(#skin)"/>
+                <path d="M141 147 Q154 80 222 83 Q292 88 299 164 L283 267 Q265 315 217 325 Q168 309 145 265Z" fill="url(#skin)" stroke="#d69bb6" stroke-width="2"/>
+                <path d="M132 191 Q105 115 149 73 Q181 32 245 52 Q304 70 312 130 L296 192 275 146 246 119 207 139 176 130 157 187Z" fill="url(#hair)" stroke="#00dff5" stroke-width="2"/>
+                <path d="M141 158 Q175 125 198 95 Q194 139 179 162 L159 204Z" fill="#162c4c"/>
+                <path d="M201 117 Q251 101 286 146 L294 186 276 169 263 143 230 138Z" fill="#101421"/>
+                <path d="M170 205 Q188 195 205 204" fill="none" stroke="#20203a" stroke-width="5" stroke-linecap="round"/>
+                <path d="M231 204 Q250 193 269 202" fill="none" stroke="#20203a" stroke-width="5" stroke-linecap="round"/>
+                <path d="M177 211 L203 211" stroke="#00f5ff" stroke-width="4" filter="url(#softglow)"/>
+                <path d="M235 210 L263 208" stroke="#00f5ff" stroke-width="4" filter="url(#softglow)"/>
+                <path d="M220 211 L214 248 231 251" fill="none" stroke="#9d607c" stroke-width="3" stroke-linecap="round"/>
+                <path d="M202 273 Q222 282 243 269" fill="none" stroke="#743f63" stroke-width="3" stroke-linecap="round"/>
+                <path d="M137 170 L115 190 130 220 149 212" fill="#17243a" stroke="#00dff5" stroke-width="2"/>
+                <path d="M295 170 L319 188 306 220 285 211" fill="#17243a" stroke="#a026cf" stroke-width="2"/>
+                <path d="M117 420 L151 396 181 445 151 540 73 540Z" fill="#111c30" stroke="#00e5ff" stroke-opacity=".8" stroke-width="2"/>
+                <path d="M312 410 L276 393 248 447 277 540 361 540Z" fill="#151329" stroke="#d52fa5" stroke-opacity=".8" stroke-width="2"/>
+                <path d="M176 356 L212 398 249 358 263 382 217 434 160 382Z" fill="#0a101d" stroke="#00e5ff" stroke-width="2"/>
+                <path d="M151 447 L177 465 M269 444 L246 465" stroke="#a026cf" stroke-width="5"/>
+                <path d="M110 491 L153 491 M268 499 L313 499" stroke="#00f5ff" stroke-width="3" filter="url(#softglow)"/>
+                <path d="M137 96 Q173 42 223 51" fill="none" stroke="#00f5ff" stroke-width="3" filter="url(#softglow)"/>
+                <path d="M275 80 L306 105" fill="none" stroke="#d52fa5" stroke-width="4" filter="url(#softglow)"/>
+                <circle cx="295" cy="226" r="5" fill="#00f5ff" filter="url(#softglow)"/>
+              </svg>
+            </div>
+            <div class="avatar-caption"><span class="caption-dot"></span><div><small>PLAYER IDENTIFIED</small><strong>ANUSHKA PATIL</strong></div><span class="caption-level">LVL. 01</span></div>
+            <div class="float-card float-card-top"><span class="float-icon">⌘</span><span><small>CORE DRIVE</small><strong>CREATIVITY</strong></span></div>
+            <div class="float-card float-card-bottom"><span class="float-icon">↗</span><span><small>NEXT OBJECTIVE</small><strong>BUILD SOMETHING GREAT</strong></span></div>
+          </div>
+        </div>
+        <div class="ticker mono"><span>TRANSMISSION INCOMING</span><div><b>BUILD</b> <i>◆</i> <b>LEARN</b> <i>◆</i> <b>CREATE</b> <i>◆</i> <b>REPEAT</b> <i>◆</i> <b>BUILD</b> <i>◆</i> <b>LEARN</b> <i>◆</i> <b>CREATE</b></div></div>
+      </section>
+
+      <!-- PROFILE -->
+      <section class="screen" id="profile" data-title="SECTOR 02 / CHARACTER PROFILE" aria-labelledby="profile-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">01 // IDENTITY DATABASE</p><h2 id="profile-title">CHARACTER <span>PROFILE</span></h2><p class="section-subtitle">Every great journey starts with knowing who you are.</p></div><span class="section-chip">PROFILE FILE / 001</span></div>
+        <div class="profile-layout">
+          <article class="panel profile-card">
+            <div class="panel-top mono"><span>PLAYER DOSSIER</span><span>● PLAYER PROFILE</span></div>
+            <div class="profile-avatar"><div class="profile-avatar-art">P<span>1</span></div></div>
+            <h3>Anushka Patil</h3><p class="accent-text">B.TECH · COMPUTER SCIENCE</p>
+            <div class="level-row"><span>EXPERIENCE LEVEL</span><strong>01 / ROOKIE</strong></div><div class="xp-track"><i style="width:35%"></i></div>
+            <p class="quote">“Small steps every day lead to big results.”</p>
+          </article>
+          <div class="profile-details">
+            <article class="panel detail-panel"><span class="detail-icon">◉</span><div><h3>ABOUT ME</h3><p>I’m a third-year B.Tech Computer Science student at Symbiosis Institute of Technology, Nagpur. I enjoy writing code that solves real problems—from web interfaces to AI systems. I work across frontend HTML/CSS, backend Python/Java, and low-level C and Assembly, and I’m comfortable using a Linux/Ubuntu terminal for scripting and automation.</p></div></article>
+            <article class="panel detail-panel"><span class="detail-icon">⌂</span><div><h3>EDUCATION</h3><p><strong>B.Tech · Computer Science</strong><br>Symbiosis Institute of Technology, Nagpur<br>Third-year student</p></div></article>
+            <article class="panel detail-panel"><span class="detail-icon">◎</span><div><h3>INTERESTS</h3><div class="tag-list"><span>AI / NLP</span><span>Web development</span><span>Systems programming</span><span>Problem solving</span><span>Linux / Ubuntu</span></div></div></article>
+            <article class="panel detail-panel"><span class="detail-icon">↗</span><div><h3>CAREER OBJECTIVE</h3><p>Building practical software across web development, AI systems, and low-level programming while continuing to learn and solve real-world problems.</p></div></article>
+          </div>
+        </div>
+        <div class="section-bottom"><span class="mono">FILE STATUS: PROFILE LOADED</span><button class="text-link" data-nav="skills">NEXT: SKILL TREE ↗</button></div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="screen" id="skills" data-title="SECTOR 03 / SKILL TREE" aria-labelledby="skills-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">02 // CAPABILITY MATRIX</p><h2 id="skills-title">THE SKILL <span>TREE</span></h2><p class="section-subtitle">Skills and tools listed in Anushka’s source portfolio.</p></div><span class="section-chip">SKILLS: 10</span></div>
+        <div class="skills-layout">
+          <div class="panel skill-tree-panel">
+            <div class="panel-top mono"><span>ABILITY NETWORK</span><span>INTERACTIVE / SELECT NODE</span></div>
+            <div class="skill-tree" id="skill-tree">
+              <svg class="tree-lines" viewBox="0 0 500 400" preserveAspectRatio="none" aria-hidden="true"><path d="M250 65 L130 155 L250 225 L370 155 L250 65 M250 225 L135 315 M250 225 L370 315 M130 155 L135 315 M370 155 L370 315"/></svg>
+              <button class="skill-node node-core selected" data-skill="web" type="button"><span>⌘</span><small>WEB DEV</small></button>
+              <button class="skill-node node-html" data-skill="frontend" type="button"><span>◇</span><small>FRONTEND</small></button>
+              <button class="skill-node node-js" data-skill="javascript" type="button"><span>JS</span><small>JAVASCRIPT</small></button>
+              <button class="skill-node node-tools" data-skill="tools" type="button"><span>⚙</span><small>TOOLS</small></button>
+              <button class="skill-node node-backend" data-skill="backend" type="button"><span>⌁</span><small>BACKEND</small></button>
+              <button class="skill-node node-soft" data-skill="soft" type="button"><span>✧</span><small>SOFT SKILLS</small></button>
+            </div>
+            <div class="tree-legend mono"><span><i class="legend-dot cyan"></i> ACTIVE NODE</span><span><i class="legend-dot purple"></i> LOCKED / LEARNING</span></div>
+          </div>
+          <aside class="panel skill-inspector" aria-live="polite">
+            <div class="panel-top mono"><span>NODE INSPECTOR</span><span id="skill-node-id">NODE_001</span></div>
+            <div class="inspector-icon" id="inspector-icon">⌘</div>
+            <p class="eyebrow">CAPABILITY DETECTED</p><h3 id="inspector-title">Web Development</h3><p id="inspector-description">Building interactive and responsive web experiences with modern browser technologies.</p>
+            <div class="inspector-divider"></div><p class="mono tiny-heading">TECHNOLOGIES / EXAMPLES</p><div class="tag-list" id="inspector-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="learning-note"><span>✦</span><p><strong>Progress is a process.</strong><br>Show what you know today, and keep adding new abilities as you grow.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="screen" id="projects" data-title="SECTOR 04 / MISSION ARCHIVE" aria-labelledby="projects-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">04 // REPOSITORY SELECT</p><h2 id="projects-title">MISSION <span>ARCHIVE</span></h2><p class="section-subtitle">All 13 repositories from Anushka’s GitHub profile. Select any card to open that exact repository in a new tab.</p></div><span class="section-chip">13 REPOSITORIES</span></div>
+        <div class="filter-row" role="group" aria-label="Filter projects">
+          <span class="mono">FILTER MISSIONS</span><button class="filter-chip active" data-filter="all">ALL</button><button class="filter-chip" data-filter="web">WEB</button><button class="filter-chip" data-filter="javascript">JAVASCRIPT</button><button class="filter-chip" data-filter="concept">SYSTEMS / COURSEWORK</button>
+        </div>
+        <div class="project-grid" id="project-grid">
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">⌘</span><span class="art-code mono">COMPILER / C</span><span class="project-number">REPO_001</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Compiler-Construction-Lab</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Compiler-Construction-Lab repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>C</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Compiler-Construction-Lab" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card project-card-direct" data-project-url="https://github.com/AnushkaPatil1107/Automated-Birthday-and-Event-Reminder" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">◷</span><span class="art-code mono">AUTOMATION / PYTHON</span><span class="project-number">REPO_002</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Automated-Birthday-and-Event-Reminder</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Automated-Birthday-and-Event-Reminder repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Python</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Automated-Birthday-and-Event-Reminder" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card project-card-direct" data-project-url="https://github.com/AnushkaPatil1107/camera-studio" data-category="web">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">▧</span><span class="art-code mono">WEB / HTML</span><span class="project-number">REPO_003</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>camera-studio</h3><span class="mission-status">REPOSITORY</span></div><p>Open the camera-studio repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>HTML</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/camera-studio" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card project-card-direct" data-project-url="https://github.com/AnushkaPatil1107/decision-api" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">⌁</span><span class="art-code mono">API / REPOSITORY</span><span class="project-number">REPO_004</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>decision-api</h3><span class="mission-status">REPOSITORY</span></div><p>Open the decision-api repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Repository</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/decision-api" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="javascript">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">JS</span><span class="art-code mono">JAVASCRIPT / REPOSITORY</span><span class="project-number">REPO_005</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>JavaScript</h3><span class="mission-status">REPOSITORY</span></div><p>Open the JavaScript repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Repository</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/JavaScript" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="web">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">✦</span><span class="art-code mono">INTERNSHIP / HTML</span><span class="project-number">REPO_006</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Maincrafts-Task-3</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Maincrafts-Task-3 repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>HTML</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Maincrafts-Task-3" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="web">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">🌐</span><span class="art-code mono">PORTFOLIO / HTML</span><span class="project-number">REPO_007</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>anushkapatil1107</h3><span class="mission-status">REPOSITORY</span></div><p>Open the anushkapatil1107.github.io repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>HTML</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/anushkapatil1107.github.io" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="web">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">↗</span><span class="art-code mono">INTERNSHIP / HTML</span><span class="project-number">REPO_008</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Maincrafts-Internship-Task-1</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Maincrafts-Internship-Task-1 repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>HTML</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Maincrafts-Internship-Task-1" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">◇</span><span class="art-code mono">JAVA / CREDIT SYSTEM</span><span class="project-number">REPO_009</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Flexi-credit-Java</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Flexi-credit-Java repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Java</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Flexi-credit-Java" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">⚙</span><span class="art-code mono">C / OPERATING SYSTEMS</span><span class="project-number">REPO_010</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>Operating-Systems-Lab</h3><span class="mission-status">REPOSITORY</span></div><p>Open the Operating-Systems-Lab repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>C</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/Operating-Systems-Lab" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">▣</span><span class="art-code mono">MES / ASSEMBLY</span><span class="project-number">REPO_011</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>MES-CA1</h3><span class="mission-status">REPOSITORY</span></div><p>Open the MES-CA1 repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Assembly</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/MES-CA1" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">✧</span><span class="art-code mono">AI / ML / COURSEWORK</span><span class="project-number">REPO_012</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>AI-ML-Lab</h3><span class="mission-status">REPOSITORY</span></div><p>Open the AI-ML-Lab repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Repository</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/AI-ML-Lab" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+<article class="panel project-card" data-category="concept">
+  <div class="project-art project-art-portfolio"><span class="portfolio-glyph">∑</span><span class="art-code mono">ALGORITHMS / COURSEWORK</span><span class="project-number">REPO_013</span></div>
+  <div class="project-content"><div class="project-card-heading"><h3>DAA-Lab</h3><span class="mission-status">REPOSITORY</span></div><p>Open the DAA-Lab repository on GitHub to explore its files and project details.</p><div class="tag-list"><span>Repository</span><span>GitHub</span></div><a class="button button-small" href="https://github.com/AnushkaPatil1107/DAA-Lab" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY ↗</a></div>
+</article>
+        </div>
+        <div class="section-bottom"><span class="mono">SOURCE: TASK 3 PORTFOLIO</span><button class="text-link" data-nav="achievements">NEXT: ACHIEVEMENTS ↗</button></div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section class="screen" id="achievements" data-title="SECTOR 05 / ACHIEVEMENT VAULT" aria-labelledby="achievements-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">04 // MILESTONES & CREDENTIALS</p><h2 id="achievements-title">ACHIEVEMENT <span>VAULT</span></h2><p class="section-subtitle">Every certificate, challenge, and contribution tells part of your story.</p></div><span class="section-chip">COLLECTION / 09</span></div>
+        <div class="achievement-grid">
+          <article class="panel achievement-card"><div class="achievement-emblem">✧</div><div><span class="achievement-type">PROJECT / AI</span><h3>Student FAQ Chatbot</h3><p>AI-powered student support using natural language processing.</p><small>PYTHON · NLP</small></div><span class="achievement-index">01</span></article>
+          <article class="panel achievement-card"><div class="achievement-emblem purple">⌘</div><div><span class="achievement-type">PROJECT / SIMULATION</span><h3>Supply Chain Digital Twin</h3><p>Modeling supply-chain behaviour to identify bottlenecks and anticipate disruptions.</p><small>PYTHON · SIMULATION</small></div><span class="achievement-index">02</span></article>
+          <article class="panel achievement-card"><div class="achievement-emblem pink">⚑</div><div><span class="achievement-type">INTERNSHIP</span><h3>Maincrafts — Task 1</h3><p>Foundational HTML deliverable for a web development internship.</p><small>HTML · WEB DEVELOPMENT</small></div><span class="achievement-index">03</span></article>
+          <article class="panel achievement-card"><div class="achievement-emblem gold">★</div><div><span class="achievement-type">COURSEWORK</span><h3>Operating Systems Lab</h3><p>Process scheduling, memory management, and system-level programming.</p><small>C · LINUX</small></div><span class="achievement-index">04</span></article>
+          <article class="panel achievement-card"><div class="achievement-emblem">↗</div><div><span class="achievement-type">COURSEWORK</span><h3>DAA Lab</h3><p>Sorting, graph traversal, dynamic programming, and complexity analysis.</p><small>C · ALGORITHMS</small></div><span class="achievement-index">05</span></article>
+          <article class="panel achievement-card"><div class="achievement-emblem purple">∞</div><div><span class="achievement-type">LOW-LEVEL SYSTEMS</span><h3>MES CA1 — Assembly</h3><p>Registers, instruction sets, and low-level operations for microprocessors and embedded systems.</p><small>ASSEMBLY · EMBEDDED</small></div><span class="achievement-index">06</span></article>
+          <article class="panel achievement-card"><div class="cert-logo cert-redhat"><img src="assets/redhatlogo.webp" alt="Red Hat logo"></div><div><span class="achievement-type">CERTIFICATE</span><h3>Red Hat</h3><p>Certificate from Red Hat.</p><small>PROFESSIONAL LEARNING</small></div><span class="achievement-index">07</span></article>
+          <article class="panel achievement-card"><div class="cert-logo cert-infosys"><img src="assets/infosyslogo.webp" alt="Infosys logo"></div><div><span class="achievement-type">CERTIFICATE</span><h3>Infosys</h3><p>Certificate from Infosys.</p><small>PROFESSIONAL LEARNING</small></div><span class="achievement-index">08</span></article>
+          <article class="panel achievement-card"><div class="cert-logo cert-udemy"><img src="assets/udemylogo.webp" alt="Udemy logo"></div><div><span class="achievement-type">CERTIFICATE</span><h3>Udemy</h3><p>Certificate from Udemy.</p><small>ONLINE LEARNING</small></div><span class="achievement-index">09</span></article>
+        </div>
+        <div class="certificate-note"><span>ⓘ</span> Certificates held: Red Hat, Infosys, and Udemy. Certificate files and individual credential details are not displayed here.</div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="screen" id="gallery" data-title="SECTOR 06 / MEMORY BANK" aria-labelledby="gallery-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">05 // SNAPSHOTS & EXPERIENCES</p><h2 id="gallery-title">MEMORY <span>BANK</span></h2><p class="section-subtitle">A visual log of your work, learning, and experiences.</p></div><span class="section-chip">ARCHIVE / 06</span></div>
+        <div class="filter-row" role="group" aria-label="Filter gallery">
+          <span class="mono">SORT ARCHIVE</span><button class="gallery-filter filter-chip active" data-gallery-filter="all">ALL</button><button class="gallery-filter filter-chip" data-gallery-filter="work">WORKSPACE</button><button class="gallery-filter filter-chip" data-gallery-filter="events">EVENTS</button><button class="gallery-filter filter-chip" data-gallery-filter="inspiration">INSPIRATION</button>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-tile tile-code" data-gallery="work" data-title="Code / Workspace"><span class="tile-symbol">&lt;/&gt;</span><span class="tile-meta"><small>MEMORY_001 / WORKSPACE</small><strong>Code in progress</strong></span><span class="tile-open">↗</span></button>
+          <button class="gallery-tile tile-event" data-gallery="events" data-title="Team / Event"><span class="tile-symbol">◉</span><span class="tile-meta"><small>MEMORY_002 / EVENTS</small><strong>Team collaboration</strong></span><span class="tile-open">↗</span></button>
+          <button class="gallery-tile tile-city" data-gallery="inspiration" data-title="City / Inspiration"><span class="tile-symbol">⌁</span><span class="tile-meta"><small>MEMORY_003 / INSPIRATION</small><strong>Future visions</strong></span><span class="tile-open">↗</span></button>
+          <button class="gallery-tile tile-notes" data-gallery="work" data-title="Ideas / Notes"><span class="tile-symbol">✎</span><span class="tile-meta"><small>MEMORY_004 / WORKSPACE</small><strong>Ideas taking shape</strong></span><span class="tile-open">↗</span></button>
+          <button class="gallery-tile tile-campus" data-gallery="events" data-title="Campus / Learning"><span class="tile-symbol">⌂</span><span class="tile-meta"><small>MEMORY_005 / EVENTS</small><strong>Learning together</strong></span><span class="tile-open">↗</span></button>
+          <button class="gallery-tile tile-neon" data-gallery="inspiration" data-title="Neon / Night City"><span class="tile-symbol">✧</span><span class="tile-meta"><small>MEMORY_006 / INSPIRATION</small><strong>After-hours creativity</strong></span><span class="tile-open">↗</span></button>
+        </div>
+        <p class="gallery-hint mono">PLACEHOLDER VISUALS — CLICK A TILE TO PREVIEW. YOUR PHOTOS CAN REPLACE THESE PANELS.</p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="screen" id="contact" data-title="SECTOR 07 / COMMUNICATION HUB" aria-labelledby="contact-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">06 // OPEN CHANNEL</p><h2 id="contact-title">LET'S <span>CONNECT</span></h2><p class="section-subtitle">Have an idea, opportunity, or just want to talk tech? Send a transmission.</p></div><span class="section-chip"><i class="tiny-dot"></i> CHANNEL OPEN</span></div>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <article class="panel contact-card"><span class="contact-icon">✉</span><div><small>EMAIL CHANNEL</small><strong>anushka.patil.batch2024@sitnagpur.siu.edu.in</strong><p>Official email channel.</p></div><button class="copy-button" data-copy="anushka.patil.batch2024@sitnagpur.siu.edu.in" title="Copy email">⧉</button></article>
+            <a class="panel contact-card" href="https://github.com/AnushkaPatil1107" target="_blank" rel="noreferrer"><span class="contact-icon">⌘</span><div><small>CODE REPOSITORY</small><strong>AnushkaPatil1107</strong><p>github.com/AnushkaPatil1107</p></div><span class="external-arrow">↗</span></a>
+            
+            <div class="contact-status"><span class="status-pulse"></span><p><strong>AVAILABLE FOR CONNECTIONS</strong><br><small>Always open to learning and collaborating.</small></p></div>
+          </div>
+          <form class="panel contact-form" id="contact-form">
+            <div class="panel-top mono"><span>TRANSMISSION COMPOSER</span><span>FORM_001</span></div>
+            <label for="sender-name">YOUR NAME <span>*</span></label><input id="sender-name" name="name" placeholder="Enter your name" required maxlength="80">
+            <label for="sender-email">YOUR EMAIL <span>*</span></label><input id="sender-email" name="email" type="email" placeholder="you@example.com" required maxlength="120">
+            <label for="sender-message">MESSAGE <span>*</span></label><textarea id="sender-message" name="message" placeholder="Write your message..." rows="5" required maxlength="1500"></textarea>
+            <button class="button button-primary submit-button" type="submit">PREPARE TRANSMISSION <span>↗</span></button>
+            <p class="form-note">This demo opens your email app; it does not store or send data to a server.</p>
+            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="stage-footer mono"><span>© <span id="year"></span> PLAYER.ONE // YOUR DIGITAL IDENTITY</span><span class="visitor-counter" aria-live="polite">VISITOR SESSIONS <b id="visitor-count">—</b></span><span>DESIGNED TO EVOLVE <b>◆</b> BUILT WITH HTML / CSS / JS</span></footer>
+    </main>
+  </div>
+
+  <!-- Reusable detail modal -->
+  <div class="modal-backdrop" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-panel panel">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close dialog">×</button>
+      <p class="eyebrow mono" id="modal-kicker">MISSION DETAILS</p>
+      <h2 id="modal-title">MISSION TITLE</h2>
+      <p id="modal-description"></p>
+      <div class="tag-list" id="modal-tags"></div>
+      <div class="modal-actions"><a class="button button-primary" id="modal-github" href="https://github.com/" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a><button class="button button-ghost" id="modal-done" type="button">CLOSE PANEL</button></div>
+    </div>
+  </div>
+
+  <!-- Gallery preview -->
+  <div class="modal-backdrop" id="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title" hidden>
+    <div class="modal-panel panel gallery-preview">
+      <button class="modal-close" id="gallery-close" type="button" aria-label="Close preview">×</button>
+      <p class="eyebrow mono">MEMORY BANK / PREVIEW</p><h2 id="gallery-modal-title">MEMORY</h2>
+      <div class="gallery-preview-art" id="gallery-preview-art"></div>
+      <p>This is a placeholder visual panel. Replace it with a real photo, event snapshot, certificate, or project screenshot.</p>
+      <button class="button button-ghost" id="gallery-done" type="button">CLOSE PREVIEW</button>
+    </div>
+  </div>
+
+  <!-- Terminal drawer -->
+  <div class="terminal-backdrop" id="terminal-backdrop" hidden>
+    <section class="terminal-window panel" role="dialog" aria-modal="true" aria-labelledby="terminal-title">
+      <div class="terminal-head"><span id="terminal-title"><i></i> PLAYER.ONE // TERMINAL</span><button id="terminal-close" type="button" aria-label="Close terminal">×</button></div>
+      <div class="terminal-output mono" id="terminal-output" aria-live="polite"><p>PLAYER.ONE OS [Version 1.0.0]</p><p>Type <b>help</b> to view available commands.</p></div>
+      <form id="terminal-form" class="terminal-input-row"><label for="terminal-input">guest@player-one:~$</label><input id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command"><button type="submit">RUN</button></form>
+      <p class="terminal-foot mono">AVAILABLE: help · home · profile · skills · projects · achievements · gallery · contact · clear · exit</p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+  <script>
+    // Count one portfolio visit per browser session. The API stores the aggregate count server-side.
+    (function () {
+      const output = document.getElementById("visitor-count");
+      if (!output) return;
+      const count = async () => {
+        try {
+          const firstVisit = !sessionStorage.getItem("playerOneVisitCounted");
+          const response = await fetch("/api/visits" + (firstVisit ? "?new=1" : ""), { cache: "no-store" });
+          if (!response.ok) throw new Error("counter unavailable");
+          const data = await response.json();
+          if (firstVisit) sessionStorage.setItem("playerOneVisitCounted", "1");
+          if (Number.isFinite(data.visits)) output.textContent = data.visits.toLocaleString();
+        } catch (_) { output.textContent = "LIVE AFTER SETUP"; }
+      };
+      count();
+    })();
+  </script>
+</body>
+</html>
