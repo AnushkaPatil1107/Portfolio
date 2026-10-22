@@ -652,3 +652,39 @@ body.warp-to-contact.warp-active .warp-transition::before { animation-name: comm
 .visitor-demo-place span { color:var(--cyan); font-size:11px; overflow-wrap:anywhere; }
 .visitor-demo-time { color:var(--muted,#9aa7bb); font-size:9px; text-align:right; }
 @media(max-width:480px) { .visitor-demo-heading { align-items:flex-start; flex-direction:column; } .visitor-demo-row { gap:9px; padding:10px 8px; } .visitor-demo-time { font-size:8px; } }
+
+
+/* Print/export: turn the interactive portfolio into a clean, complete PDF document. */
+@page { size: A4; margin: 14mm 12mm; }
+@media print {
+  :root { --bg: #fff; --bg-2: #fff; --panel: #fff; --panel-2: #f4f6f8; --line: #d8dee7; --white: #172033; --muted: #4b5565; --dim: #596579; --cyan: #087f8c; --purple: #6941a5; --pink: #b4235a; --green: #16794b; }
+  html, body { width: auto !important; min-height: 0 !important; background: #fff !important; color: #172033 !important; overflow: visible !important; font-size: 10pt !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .scanlines, #boot-screen, .sidebar, .topbar, .stage-topline, .toast, .modal-backdrop, .terminal-backdrop, .pdf-export { display: none !important; }
+  #app, .app-shell, .app-shell.is-hidden { display: block !important; position: static !important; inset: auto !important; visibility: visible !important; opacity: 1 !important; transform: none !important; pointer-events: auto !important; min-height: 0 !important; }
+  .main-stage { display: block !important; margin: 0 !important; padding: 0 !important; min-height: 0 !important; }
+  .screen, .screen[hidden], .screen.active, .screen.leaving { display: block !important; position: static !important; visibility: visible !important; opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; animation: none !important; page-break-before: auto; break-before: auto; margin: 0 0 12mm !important; padding: 0 !important; }
+  .screen::before, .screen::after, .panel::before, .panel::after { display: none !important; content: none !important; }
+  .screen#home { border-bottom: 2px solid #087f8c; padding-bottom: 7mm !important; }
+  .section-heading { margin: 0 0 5mm !important; padding-bottom: 3mm !important; border-bottom: 1px solid #d8dee7 !important; }
+  h1, h2, h3, h4, p, li, span, strong, a, button { color: #172033 !important; text-shadow: none !important; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  h1 { font-size: 25pt !important; }
+  h2 { font-size: 17pt !important; }
+  h3 { font-size: 11pt !important; }
+  p { line-height: 1.45 !important; }
+  a { text-decoration: none !important; overflow-wrap: anywhere; }
+  .panel, .project-card, .achievement-card, .profile-card, .contact-form, .skill-inspector, .skill-tree-panel, .gallery-item { background: #fff !important; color: #172033 !important; border: 1px solid #d8dee7 !important; box-shadow: none !important; break-inside: avoid; page-break-inside: avoid; }
+  .hero-layout, .profile-layout, .skills-layout, .project-grid, .achievement-grid, .gallery-grid, .contact-layout { display: block !important; }
+  .hero-copy, .hero-visual, .profile-layout > *, .skills-layout > *, .project-card, .achievement-card, .gallery-item, .contact-layout > * { margin-bottom: 4mm !important; }
+  .hero-visual { max-height: 55mm; overflow: hidden; }
+  .project-card { display: block !important; }
+  .project-art { max-height: 22mm; overflow: hidden; background: #f4f6f8 !important; }
+  .button, .button-small, .text-link { background: #fff !important; border: 1px solid #aab4c2 !important; box-shadow: none !important; }
+  .filter-row, .skill-tree, .terminal-launch, .visitor-demo { display: none !important; }
+  .tag-list span, .section-chip, .eyebrow, .mono { color: #087f8c !important; }
+  img, svg { max-width: 100% !important; }
+  .contact-form input, .contact-form textarea { background: #fff !important; color: #172033 !important; border-color: #d8dee7 !important; }
+  .section-bottom { border-top: 1px solid #d8dee7 !important; }
+  * { animation: none !important; transition: none !important; }
+}
