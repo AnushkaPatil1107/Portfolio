@@ -396,6 +396,10 @@
     el.addEventListener("mouseenter", () => playTone(720, .025));
   });
 
+  // Export every portfolio section through the browser print dialog (choose Save as PDF).
+  const pdfButton = $("#generate-pdf");
+  if (pdfButton) pdfButton.addEventListener("click", () => window.print());
+
   // Keep app functional with hash routes and without external services.
   console.info("Anushka Patil portfolio loaded.");
 })();
